@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm on a new activity yo"/>
+        android:id="@+id/list_view_starters"/>
 
 
 </LinearLayout>
