@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class StartersActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class StartersActivity extends AppCompatActivity {
 
         ListView startersList = findViewById(R.id.list_view_starters);
 
-        String[] starterDishes = {
+        String[] dishes = {
                 "Bruschetta",
                 "Caprese Salad",
                 "Caesar Salad",
@@ -38,5 +39,8 @@ public class StartersActivity extends AppCompatActivity {
                 "Clam Chowder"
         };
 
+        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
+
+        startersList.setAdapter(dishesAdapter);
     }
 }
