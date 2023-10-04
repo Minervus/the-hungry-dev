@@ -16,6 +16,8 @@ public class StartersActivity extends AppCompatActivity {
 
         ListView startersList = findViewById(R.id.list_view_starters);
 
+        Dish dishOne = new Dish("Bruschetta", "Classic Italian appetizer that is easy to make at home. Toasted bread is topped with tomatoes", 30);
+
         String[] dishes = {
                 "Bruschetta",
                 "Caprese Salad",
