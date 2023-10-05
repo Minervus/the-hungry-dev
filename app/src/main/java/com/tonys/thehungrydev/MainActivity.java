@@ -30,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Add click listener for the 'Mains' card on the main activity
+        mainsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent is 'what do you want to do?
+                // This intent wants to send the user from here MainActivity.this to MainCoursesActivity.class
+                Intent mainCoursesActivityIntent = new Intent(MainActivity.this, MainCoursesActivity.class);
+
+                // We want to start the mainCoursesActivityIntent activity
+                startActivity(mainCoursesActivityIntent);
+            }
+        });
+
 
 
     }
