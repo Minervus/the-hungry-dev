@@ -12,10 +12,13 @@ public class StartersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // connects the view for this activity to the activity_starters.xml
         setContentView(R.layout.activity_starters);
 
+        // ListView for the startersList is connected to the list_view_starters from the activity_starters.xml
         ListView startersList = findViewById(R.id.list_view_starters);
 
+        // Array with embedded constructors - creates an array and object instances inside it in one line of code
         Dish[] dishes = {
                 new Dish("Bruschetta", "Classic Italian appetizer that is easy to make at home. Toasted bread is topped with tomatoes", 30),
                 new Dish("Melon and lemon soup", "Fresh melon and lemon combined into creamy soup", 1199),
@@ -53,9 +56,10 @@ public class StartersActivity extends AppCompatActivity {
         };
         */
 
+        // Binds an array to a UI component - the array is the 'dishes'  array above
+        ArrayAdapter<Dish> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
 
-        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
-
+        // This line connects the startersList 'ListView' to the dishesAdapter in the line above
         startersList.setAdapter(dishesAdapter);
     }
 }
